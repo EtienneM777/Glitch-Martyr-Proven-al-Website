@@ -1,0 +1,173 @@
+
+:root {
+  background-image: linear-gradient(teal,lavender,salmon,lime);
+  --color-text-main: #986984;
+  --color-primary: #986984;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "Bradley Hand";
+  --font-family-header: "Bradley Hand";
+}
+
+/* Page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: Bradley Hand;
+  src: url("https://cdn.glitch.global/d9ba5b3e-5872-49d5-910a-42a0d79313ae/D224B354-4E62-4EC6-8AC9-650927392BAB.jpg?v=1677820941846")
+    format("opentype");
+}
+@font-face {
+  font-family: Bradley Hand;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* remix button */
+.btn--remix {
+  font-family: Bradley Hand;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2.75rem;
+  align-items: center;
+  cursor: pointer;
+  background: #AB6F91;
+  border: 1px solid #800C4E;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #800C4E;
+  
+
+}
+.btn--remix img {
+  margin-right: 0.5rem;
+}
+.btn--remix:hover {
+  background-color: #800C4E;
+}
+
+/* Navigation grid */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
+
+.footer a:not(.btn--remix):link,
+a:not(.btn--remix):visited {
+  font-family: Bradley Hand;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  border-style: none;
+}
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END default styles
+******************************************************************************/
+
+body {
+  font-family: papyrus;
+  background-color: var(--color-bg);
+}
+
+/* Page Shape */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Very light scaling for illustration V1 */
+.title {
+  color: #986984;
+  font-family: papyrus;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 105%;
+  margin: 0;
+}
+
+/* Very light scaling for illustration V2 */
+.illustration {
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+}
+
+.instructions {
+  margin: 1rem auto 0;
+}
+
+/* Button */
+button,
+input {
+  font-family: Bradley Hand;
+  font-size: 150%;
+  background: #986984;
+  border: 1px solid #986984;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: 500ms;
+}
+
+/* Subheading */
+h2 {
+  color: #986984;
+}
+
+/* Interactive image */
+.illustration:active {
+  transform: translateY(5px);
+}
+
+.dipped {
+  transform: translateY(5px);
+}
+
+/* Links that open files in the editor */
+.fileopener {
+  cursor:pointer;
+  font-weight:bold;
+  border-bottom:3px solid var(--color-primary);
+  color: var(--color-secondary);
+}
+.fileopener:hover {
+  border-bottom:3px solid var(--color-secondary);
+}
